@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online ical viewer (icalendar, ics file)</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/ics.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Online ical viewer (icalendar, ics file)</h1>
+	
+	<div class="file_select">
+		<div id="drop_zone">
+		Drop .ics file here
+		<br />
+		or
+		<br />
+		<input type="button" class="btn btn-info btn-sm" id="upload" value="select .ics file">
+		<input id="upload_file" type="file">
+		</div>
+		<output id="list"></output>
+	</div>
+
+	<div id="ical_content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					FROM:
+					<span id="ics_from"></span>
+				</div>
+				<div class="col-md-12">
+					SUMMARY:
+					<span id="ics_summary"></span>
+				</div>
+				<div class="col-md-12">
+					DESCRIPTION:
+					<span id="ics_description"></span>
+				</div>
+				<div class="col-md-12">
+					LOCATION:
+					<span id="ics_location"></span>
+				</div>
+				<div class="col-md-12">
+					WHEN:
+					<span id="ics_when"></span>
+				</div>
+				<div class="col-md-12">
+					ATTENDEES:
+					<span id="ics_attendees"></span>
+				</div>
+			</div>
+	</div>
+	<div id="byte_content"></div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/ical.js"> </script>
+	<script type="text/javascript" src="js/ics.js"> </script>
+  </body>
+</html>
